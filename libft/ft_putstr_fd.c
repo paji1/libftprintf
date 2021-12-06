@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tel-mouh <tel-mouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 13:54:29 by tel-mouh          #+#    #+#             */
-/*   Updated: 2021/11/27 15:20:19 by tel-mouh         ###   ########.fr       */
-/*                                               q                             */
+/*   Created: 2021/11/13 02:42:07 by tel-mouh          #+#    #+#             */
+/*   Updated: 2021/11/18 07:34:52 by tel-mouh         ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include <limits.h>
-int main()
+#include "libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
 {
-
-
-
-	printf(" %d\n",ft_printf("%u", -1));
-	
-	
-
-	return 0;
+	if (s)
+		while (*s)
+			write(fd, s++, 1);
 }
