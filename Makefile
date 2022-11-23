@@ -22,9 +22,9 @@ OBJS_LIBFT	:= $(SRCS_LIBFT:.c=.o)
 # *****************************************************************
 all:  $(NAME)
 
-# test: 
-# 	@ $(CC) $(CFLAGS) main.c $(NAME) -o main
-# 	@ ./main
+test: 
+	@ $(CC) $(CFLAGS) main.c $(NAME) -o main
+	@ ./main
 
 $(NAME):	$(OBJS)  $(OBJS_LIBFT) 
 	@ $(AR) $(NAME) $(OBJS) $(OBJS_LIBFT)
@@ -34,7 +34,7 @@ $(NAME):	$(OBJS)  $(OBJS_LIBFT)
 
 clean:
 	$(RM) $(OBJS) $(OBJS_bonus) $(OBJS_LIBFT) main
- 
+
 fclean:	clean
 		$(RM) $(NAME)
 

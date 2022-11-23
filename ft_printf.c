@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tel-mouh <tel-mouh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:22:19 by tel-mouh          #+#    #+#             */
-/*   Updated: 2021/12/06 08:07:10 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/11/23 06:44:08 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ static int	litters(va_list *a, const char *s, int i, int t)
 		ft_putstr_fd("0x", 1);
 		t = ft_adress_fd(va_arg(*a, long), 1, 'x') + 2;
 	}
+	else 
+		ft_putchar_fd(s[i + 1], 1);
 	return (t);
 }
 
@@ -59,3 +61,4 @@ int	ft_printf(const char *s, ...)
 	va_end(a);
 	return (t);
 }
+

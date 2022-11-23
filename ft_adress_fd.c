@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_adress_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tel-mouh <tel-mouh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 15:38:21 by tel-mouh          #+#    #+#             */
-/*   Updated: 2021/12/06 00:56:28 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/11/23 06:21:17 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,6 @@ int	ft_adress_fd(unsigned long int n, int fd, char c)
 		s = t;
 	else
 		s = m;
-	if (n < 0)
-	{
-		n *= -1;
-		ft_putchar_fd ('-', fd);
-	}
 	if (n < 16)
 		ft_putchar_fd(s[n], fd);
 	else
